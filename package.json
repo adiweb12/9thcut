@@ -1,0 +1,16 @@
+{
+  "name": "short-cinema-website",
+  "version": "1.0.0",
+  "description": "Website for NINE TH CUT STUDIOS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}

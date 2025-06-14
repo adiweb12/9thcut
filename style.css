@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background */
+    color: #eee; /* Light text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+.logo {
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #00bcd4; /* A light blue/cyan for branding */
+    margin: 0;
+}
+
+h2 {
+    color: #00bcd4;
+    text-align: center;
+    margin-top: 30px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* User Registration Form */
+#user-registration {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    text-align: center;
+}
+
+#registration-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#registration-form input[type="text"],
+#registration-form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #eee;
+}
+
+#registration-form button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#registration-form button:hover {
+    background-color: #0097a7;
+}
+
+#registration-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Video Gallery */
+#video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.video-item {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.video-item .thumbnail {
+    width: 100%;
+    height: 180px; /* Fixed height for consistency */
+    object-fit: cover;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.video-item h3 {
+    margin: 15px 10px 5px;
+    color: #eee;
+    font-size: 1.2em;
+}
+
+.video-item p {
+    margin: 0 10px 10px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.video-item .actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.video-item button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.video-item button:hover {
+    background-color: #0097a7;
+}
+
+.video-item .like-count {
+    font-size: 0.9em;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Modal for Video Playback */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #222;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be responsive */
+    max-width: 800px; /* Max width for large screens */
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#youtube-player {
+    width: 100%;
+    /* 16:9 aspect ratio (height = width * 9 / 16) */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+#youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 2px solid #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #video-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINE TH CUT STUDIOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="/logo.png" alt="NINE TH CUT STUDIOS Logo" class="logo">
+        <h1>NINE TH CUT STUDIOS</h1>
+        <p>Short Cinema & Visual Storytelling</p>
+    </header>
+
+    <main>
+        <section id="user-registration">
+            <h2>Welcome! Please tell us about yourself.</h2>
+            <form id="registration-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Enter</button>
+                <p id="registration-message"></p>
+            </form>
+        </section>
+
+        <section id="video-gallery" style="display: none;">
+            <h2>Our Short Films</h2>
+            <div id="video-list">
+                </div>
+        </section>
+
+        <div id="video-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="youtube-player"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NINE TH CUT STUDIOS. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
